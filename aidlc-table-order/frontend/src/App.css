@@ -1,0 +1,74 @@
+/* Global Styles - Landscape Tablet Optimization */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Landscape optimization for 10" tablets (1024x768+) */
+@media (min-width: 1024px) and (orientation: landscape) {
+  .ant-col-md-6 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf;
+}
+
+/* Ant Design notification positioning */
+.ant-notification {
+  z-index: 1100;
+}
+
+/* Menu page responsive grid */
+@media (max-width: 600px) {
+  div[data-testid="menu-page"] > div:last-child {
+    grid-template-columns: 1fr !important;
+    padding: 8px 16px 40px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  div[data-testid="menu-page"] > div:last-child {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 1200px !important;
+  }
+}
+
+/* Table card pulse animation for new orders */
+@keyframes tablePulse {
+  0% { box-shadow: 0 0 0 0 rgba(24, 144, 255, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(24, 144, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(24, 144, 255, 0); }
+}
+
+.table-card-pulse {
+  animation: tablePulse 1s ease-in-out infinite;
+}
+
+/* Admin layout */
+.ant-layout-sider-trigger {
+  background: #002140;
+}
