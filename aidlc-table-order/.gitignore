@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+backend/target/
+frontend/dist/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+# Env
+.env
+.env.local
